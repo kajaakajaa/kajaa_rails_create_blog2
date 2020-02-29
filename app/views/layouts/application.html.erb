@@ -11,9 +11,19 @@
 
   <body>
     <div class="container">
-    <h1><%= link_to "kajaa blog2", root_path, :style=>
-    "color: #darkblue;", class: "font" %></h1>
-    <%= yield %>
+      <h1><%= link_to "kajaa blog2", root_path, :style=>
+        "color: #darkblue;", class: "font" %>
+      </h1>
+
+      <%
+=begin%>
+ <script>
+        alert("このページはいやらしいページです。本当に開きますか？");
+      </script> 
+<%
+=end%>
+
+      <%= yield %>
     </div>
   </body>
 </html>
