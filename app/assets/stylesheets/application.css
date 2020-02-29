@@ -52,8 +52,11 @@ ul > li {
   font-size: 12px;
   font-weight: normal;
   float: right;
-  position: relative; bottom: 20px;
+  position: relative; bottom: 20px; right: 10px;
+  text-decoration: none;
 }
+
+.header-menu:hover {text-decoration: underline;}
 
 input[type="text"], textarea {
   box-sizing: border-box;
@@ -71,7 +74,7 @@ textarea {
   color: tomato;
 }
 
-.comand {
+.command {
   font-size: 12px;
 }
 

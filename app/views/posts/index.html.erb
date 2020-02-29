@@ -1,15 +1,13 @@
 <h2>
-<%= link_to "Add New", new_post_path, class: "header-menu" %>
+  <%= link_to "Add New", new_post_path, class: "header-menu" %>
 </h2>
 <ul>
   <% @posts.each do |post| %>
   <li>
-  <%= link_to post.title, post_path(post.id) %>
-  <%= link_to "[Edit]", edit_post_path(post), class: "comand" %>
-  <%= link_to "[Del]", post_path(post), 
-  method: :delete, 
-  class: "comand", 
-  data: { confirm: "are you sure?" } %>
+    <%= link_to post.title, post_path(post.id) %>
+    <%= link_to "[Edit]", edit_post_path(post), class: "command" %>
+    <%= link_to "[Del]", post_path(post), 
+      method: :delete, data: { confirm: "are you sure?" } %>
   </li>
   <% end %>
 </ul>

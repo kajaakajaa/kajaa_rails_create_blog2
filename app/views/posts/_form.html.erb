@@ -1,4 +1,10 @@
-<%= form_for @post do |f| %>
+<%
+=begin%>
+ <%= form_for @post do |f| %> 
+<%
+=end%>
+<%= form_with model:@post, url:posts_path,
+id: "new_posts", class: "new_posts", local: true do |f| %>
 <p>
   <%= f.text_field :title, placeholder: "enter contents! fuck you ass hole!!" %>
   <% if @post.errors.messages[:title].any? %>
