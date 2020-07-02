@@ -3,13 +3,11 @@
  <%= form_for @post do |f| %> 
 <%
 =end%>
-<%= form_with model:@post, url:posts_path,
-id: "new_posts", class: "new_posts", local: true do |f| %>
+<%= form_with model:@post, id: "new_posts", class: "new_posts", local: true do |f| %>
 <p>
   <%= f.text_field :title, placeholder: "enter contents! fuck you ass hole!!" %>
   <% if @post.errors.messages[:title].any? %>
   <span class= "error"><%= @post.errors.messages[:title][0] %></span>
-      <% binding.pry %>
   <% end %>
 </p>
 <p>
