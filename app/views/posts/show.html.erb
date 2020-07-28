@@ -4,14 +4,12 @@
 <h3>Comments</h3>
 <% if @post.comments.any? %>
   <ul>
-  <% @post.comments.each do |comment| %>
+    <% @post.comments.each do |comment| %>
     <li>
       <%= comment.body %>
         <%= link_to "[Del]", 
           post_comment_path(@post, comment), 
-          method: :delete, 
-          class: "comand", 
-          data: { confirm: "are you sure?" } %>
+          method: :delete, data: { confirm: "are you sure?" } %>
     </li>
     <% end %>
   </ul>
