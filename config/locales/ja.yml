@@ -6,5 +6,7 @@ ja:
       post:
         title: "タイトル"
         body: "本文"
-    errors:
-      message: "空欄"
+  errors:
+    messages:
+      blank: "空欄どなんか入りれー"
+
